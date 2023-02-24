@@ -1,0 +1,41 @@
+<aura:component controller="Uniform_filteroption">
+    
+    <aura:attribute name="accountlist" type="List" />
+    <aura:attribute name="policyList" type="List" />
+    <aura:attribute name="selectedClient" type="string" />
+     <aura:attribute name="selectedpolicy" type="string" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getfilterdata}" />
+    
+    
+    <div class="slds-card c-container">
+        <lightning:layout multipleRows="true">
+        <lightning:layoutitem size="4" padding="around-medium" flexibility="true">
+             <lightning:select name="select account" label="Accounts" onchange="{!c.onclientselection}" aura:id="account">
+       		<option value="">---select account---</option>
+            <aura:iteration items="{!v.accountlist}" var="acc">
+                <option value="{!acc.Id}">{!acc.Name}</option>
+            </aura:iteration>
+    </lightning:select>
+        </lightning:layoutitem>
+            
+        <lightning:layoutitem size="4" padding="around-medium" flexibility="true">
+            <lightning:select name="select policy" label="Policy" onchange="{!c.onpolicyselection}" aura:id="policy">
+       		<option value="">---select account---</option>
+            <aura:iteration items="{!v.policyList}" var="poly">
+                <option value="{!poly.Id}">{!poly.Name}</option>
+            </aura:iteration>
+    </lightning:select>
+        </lightning:layoutitem>
+            
+         <lightning:layoutitem size="4" padding="around-medium" class="slds-m-top--large" flexibility="true">
+            <lightning:button variant="brand" label="Refresh Policy" title="Refresh Policy" onclick="{!c.refreshpolicy}"  />
+        </lightning:layoutitem>
+            
+        <lightning:layoutitem padding="around-medium" size="12" flexibility="true"> 
+           <c:Uniform_Policyconfiguemain_left ClientId="{!v.selectedClient}" PolicyId="{!v.selectedpolicy}" aura:id="inline"/>
+          </lightning:layoutitem>
+       </lightning:layout>
+    </div>
+    
+</aura:component>

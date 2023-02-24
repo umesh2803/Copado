@@ -1,0 +1,4 @@
+<aura:component >
+    <c:SecondEvent_child1 />
+     <c:SecondEvent_child2 />
+</aura:component>

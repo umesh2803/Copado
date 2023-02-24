@@ -1,0 +1,35 @@
+<apex:page >
+    <apex:form >
+    <apex:sectionHeader title="Product" subtitle="New Product" help="/apex/student"/>
+   
+    <apex:pageBlock title="Product">
+        
+        <apex:pageBlockButtons location="top">
+         <apex:commandButton value="save" style="background:green"/>
+         <apex:commandButton value="cancel"/>
+         </apex:pageBlockButtons>       
+        
+     
+     
+          
+          Name  : umesh
+        
+        
+              </apex:pageBlock>  
+        
+        
+        
+        
+        
+        
+        
+        
+       
+    
+    
+    
+    
+    
+  
+     </apex:form>
+ </apex:page>

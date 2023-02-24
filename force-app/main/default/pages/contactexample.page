@@ -1,0 +1,41 @@
+<apex:page standardController="contact">
+    <apex:form >
+        <apex:sectionHeader title="Contact" subtitle="New contact" help="/apex/calculator" />
+          <apex:pageBlock title="Contact">
+             <apex:pageBlockButtons location="top">
+                 <apex:commandButton value="save" action="{!save}" />
+                 <apex:commandButton value="cancel" action="{!cancel}"/>
+             </apex:pageBlockButtons>
+              <apex:inlineEditSupport >
+              
+                  <apex:pageBlockSection title="Basic Information" collapsible="false" columns="2">
+                  
+                  <apex:outputField value="{!contact.Lastname}"/>
+                      <script>
+                      alert('lastname is compulsory');
+                      </script>
+                  
+                  <apex:outputField value="{!contact.email}"/>
+                  <apex:outputField value="{!contact.Firstname}"/>
+                   <apex:outputField value="{!contact.phone}"/>
+                  <apex:outputField value="{!contact.ownerID}"/>
+                
+                  
+              </apex:pageBlockSection>
+      
+        
+              </apex:inlineEditSupport>
+        
+        
+        </apex:pageBlock>
+    
+    
+    
+    
+    
+    
+    </apex:form>
+    
+    
+    
+</apex:page>

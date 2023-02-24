@@ -1,0 +1,8 @@
+<apex:page sidebar="true">
+           
+    age        : 28		<br/>
+    sport      :cricket 
+    
+    
+    
+</apex:page>

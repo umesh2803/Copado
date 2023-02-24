@@ -1,0 +1,84 @@
+<apex:page standardController="Account" sidebar="false">
+  <apex:tabPanel >
+                 
+        <apex:tab title="xyz" label="tab1">
+            
+            <apex:pageBlock title="Account Registration Info">
+        <apex:pageBlockSection title="Account Basic Info" columns="1">
+            <apex:outputField value="{!Account.name}"/>
+            <apex:outputField value="{!Account.fax}"/>
+            <apex:outputField value="{!Account.phone}"/>
+            <apex:outputField value="{!Account.Industry}"/>
+            <apex:outputField value="{!Account.Rating}"/>
+            <apex:outputField value="{!Account.Sic}"/>
+            <apex:outputField value="{!Account.Description}"/>
+            <apex:outputField value="{!Account.Billingcity}"/>
+        </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:tab>
+        
+         <apex:tab label="Tab2">
+        </apex:tab>
+    
+         <apex:tab label="Tab3">
+             
+             
+             <apex:pageBlock title="Account Registration Info">
+        <apex:pageBlockSection title="Account Basic Info" columns="1">
+            <apex:outputField value="{!Account.name}"/>
+            <apex:outputField value="{!Account.fax}"/>
+            <apex:outputField value="{!Account.phone}"/>
+            <apex:outputField value="{!Account.Industry}"/>
+            <apex:outputField value="{!Account.Rating}"/>
+            <apex:outputField value="{!Account.Sic}"/>
+            <apex:outputField value="{!Account.Description}"/>
+            <apex:outputField value="{!Account.Billingcity}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Account Related History" columns="1">
+            
+             <apex:relatedList list="Cases"/>
+            <apex:relatedList list="Opportunities"/>
+            <apex:relatedList list="Contacts"/>
+        
+        
+        
+        </apex:pageBlockSection>
+        <apex:pageBlock title="Contact Info">
+            <apex:pageBlockSection title="Personal Info">
+            
+            
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Family Info">
+            
+            
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Account custom related table">
+                <apex:pageBlockTable value="{!Account.contacts}" var="acc">
+                    <apex:column value="{!acc.Firstname}"/>
+                    <apex:column value="{!acc.Leadsource}"/>
+                    <apex:column value="{!acc.MobilePhone}"/>
+                
+                </apex:pageBlockTable>
+            
+            
+            
+            </apex:pageBlockSection>
+        
+               <apex:pageBlockSection title="Bank Info">
+            
+            <apex:detail />
+            </apex:pageBlockSection>        
+        
+        </apex:pageBlock>
+      
+    </apex:pageBlock>
+    
+        </apex:tab>
+    
+    
+    
+    </apex:tabPanel>
+    
+</apex:page>

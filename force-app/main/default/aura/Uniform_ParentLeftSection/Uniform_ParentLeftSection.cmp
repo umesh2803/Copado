@@ -1,0 +1,10 @@
+<aura:component >
+   
+    <div class="c-container">
+        <lightning:layout>
+        <lightning:layoutitem padding="around-medium" size="12" flexibility="auto">
+           <c:Uniform_Filteroption_left />
+            </lightning:layoutitem>
+        </lightning:layout>
+    </div>
+</aura:component>

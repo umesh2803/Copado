@@ -1,0 +1,10 @@
+<apex:page controller="XML_EXAMPLE_1" >
+    <apex:form >
+    <apex:inputText value="{!SearchText}"/>
+        <apex:commandButton value="search" action="{!show}" reRender="one"/>
+        <apex:outputLabel value="{!result}" id="one" /> <!--we can write value as result also -->
+                                                  
+        
+    
+    </apex:form>
+</apex:page>

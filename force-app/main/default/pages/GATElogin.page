@@ -1,0 +1,86 @@
+<apex:page standardController="student_login__c" extensions="urlpage">
+    <apex:form >  
+       
+ <apex:pageBlock >
+        <apex:pageBlockSection columns="4" >
+        <apex:pageBlockSectionItem >
+            <apex:image value="{!$Resource.index}" width="30" height="20" dir="LTR" />
+      <apex:commandLink value="click for issue" style="font-size:150%"  />
+        </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+          
+          <apex:image value="{!$Resource.index1}" width="30" height="20"/>
+             <apex:commandLink value="call" style="font-size:150%"  />
+                </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+            
+    </apex:pageBlock>
+   
+    <apex:pageBlock >
+        <apex:image value="{!$Resource.sfdc}"/>
+    
+    </apex:pageBlock>
+        <apex:pageBlock >
+          
+              
+          
+            <h1 style="text-decoration: none;font-size:15px">
+              
+                <apex:commandLink value="HOME" onclick="parent.open('https://phonepay-dev-ed--c.visualforce.com/apex/GATE')" style="text-decoration: none;" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <apex:commandLink value="GATE 2022" onclick="parent.open('https://phonepay-dev-ed--c.visualforce.com/apex/GATE')" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <apex:commandLink value="DOWNLOAD INFORMATION" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <apex:commandLink value="OLD QUETION PAPER" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:commandLink value="EXAM CITIES"   style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <apex:commandLink value="REGISTRATION" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <apex:commandLink value="FAQ" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:commandLink value="CONTACT US" onclick="parent.open('https://phonepay-dev-ed--c.visualforce.com/apex/gate1')" style="text-decoration: none;"/>
+            
+            </h1>
+               
+          </apex:pageBlock>
+             <apex:pageBlock >
+                <h1 style="font-size:130%;width:100;margin-left:1130px; text-decoration: none;">
+                    
+               
+                 <apex:commandLink value="Home" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <apex:commandLink value="GATE 2022" onclick="parent.open('https://phonepay-dev-ed--c.visualforce.com/apex/GATE')" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;   
+                    <apex:commandLink value="Login" onclick="parent.open('https://phonepay-dev-ed--c.visualforce.com/apex/GATElogin')" style="text-decoration: none;"/>
+                    </h1><br/> <h1 style="font-size:130%;width:100">
+                <apex:pageBlockSection title="Login, If Already Registered" dir="LTR" columns="1">
+                   
+                     <apex:pageBlockSectionItem >
+                    <apex:outputLabel > ID
+                    </apex:outputLabel>
+                    <apex:inputText value="{!cid}"/>
+                         </apex:pageBlockSectionItem>
+                     <apex:pageBlockSectionItem >
+                    <apex:outputLabel > password
+                    </apex:outputLabel>
+                    <apex:inputText value="{!cpassword}"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    
+                   
+                    <apex:commandButton value="Submit" action="{!show}" style="width:100;margin-left:275px;background:DodgerBlue;color:white"/>
+                    
+                    </apex:pageBlockSection>
+               
+                    
+                     
+                    <apex:facet name="footer">
+                       <h1 style="font-size:120%;dir:LTR">
+                           © 2021-22 IIT Kharagpur
+						</h1> 
+                    </apex:facet>
+            
+           </h1>
+              
+             </apex:pageBlock>
+          
+             
+                    
+                    
+           
+            
+        </apex:form>
+    </apex:page>

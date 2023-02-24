@@ -1,0 +1,7 @@
+<aura:component >
+    <lightning:input label="Enter NUumber 1" aura:id="aval" />
+    <lightning:input label="Enter NUumber 2" aura:id="bval" />
+    <lightning:input label="Result" aura:id="Result" />
+    <lightning:button label="add" onclick="{!c.show}" />
+    <lightning:button label="multi" onclick="{!c.call}" />
+</aura:component>

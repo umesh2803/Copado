@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:sectionHeader title="hello"/>
+    <apex:pageBlock title="hiii" dir="LTR"  >
+    
+    
+    
+    
+    
+    </apex:pageBlock>
+    
+    
+    
+    
+    
+    
+</apex:page>

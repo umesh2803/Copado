@@ -1,0 +1,9 @@
+<apex:page controller="JASON_GENERATOR_1" setup="true" >
+   <apex:pageBlock >
+    {!jsonstring} <br/> <br/>
+    <apex:pageBlockTable value="{!resmap}" var="a" >
+        <apex:column value="{!a}" headerValue="text"/>
+        <apex:column value="{!resmap[a]}" headerValue="token"/>
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

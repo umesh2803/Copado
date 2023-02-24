@@ -1,0 +1,40 @@
+<aura:component controller="ConfigureActiveClient" >
+    <aura:attribute name="Account" type="List" />
+    <aura:attribute name="Policy" type="List" />
+    <aura:attribute name="SelectedAccount" type="string" />
+    <aura:attribute name="Selectedpolicy" type="string" />
+    <aura:registerEvent type="c:EVENT_YRD_AP" name="Totalpolicy"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.clienton}" />
+    <aura:handler name="reset" event="c:EVENT_YRD" action="{!c.RefreshAll}" />
+    <lightning:avatar fallbackIconName="standard:person_account" alternativeText="account" />
+    
+   <lightning:layout class="slds-card slds-p-around--large slds-p-around--xx-large background" multipleRows="true" >
+        <lightning:layoutitem size="4" >
+        <lightning:select name="select" label="Active Account" onchange="{!c.Clientchange}" aura:id="Account">
+             <option value="">--Please Select Account--</option>
+            <aura:iteration items="{!v.Account}" var="Acc">
+                <option value="{!Acc.Id}">{!Acc.Name}</option>
+            </aura:iteration>
+        </lightning:select> 
+           
+        </lightning:layoutitem>
+         <lightning:layoutitem size="4">
+             <lightning:select name="select" label="Active Policy" class="slds-m-left--large" onchange="{!c.policychange}" aura:id="Policy">
+               <option value="">--Please Select Policy--</option>
+              <aura:iteration items="{!v.Policy}" var="Poly">
+                <option value="{!Poly.Id}">{!Poly.Name}</option>
+            </aura:iteration>
+    </lightning:select>        
+      </lightning:layoutitem>
+        <lightning:layoutitem size="4">
+            <div class="slds-m-around--large slds-m-left--large"><lightning:button variant="brand" label="Refreshfilter" onclick="{!c.RefreshAll}" /></div>
+            
+       </lightning:layoutitem>
+       <lightning:layoutitem size="12">
+        <c:PolicyConfigMain SelectedAccount="{!v.SelectedAccount}" Selectedpolicy="{!v.Selectedpolicy}" aura:id="AURAmethod"/>
+       </lightning:layoutitem>
+   </lightning:layout>
+    
+   
+</aura:component>

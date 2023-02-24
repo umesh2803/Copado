@@ -1,0 +1,7 @@
+<aura:component>
+    <aura:attribute name="myBool" type="Boolean" default="true"/>
+
+    <!-- Handle the aura:valueChange event -->
+    <aura:handler name="change" value="{!v.myBool}" action="{!c.handleValueChange}"/>
+    <lightning:button label="change value" onclick="{!c.changeValue}"/>
+</aura:component>

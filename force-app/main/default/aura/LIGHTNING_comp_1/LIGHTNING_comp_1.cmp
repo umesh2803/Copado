@@ -1,0 +1,9 @@
+<aura:component >
+    Name : umesh <br/>
+    phone :123  <br/>
+    
+    <div>
+    Name : umesh <br/>
+    phone :123  <br/>
+    </div>
+</aura:component>

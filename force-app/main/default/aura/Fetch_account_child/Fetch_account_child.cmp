@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:registerEvent name="firstcall" type="c:Fetch_account" />
+    <lightning:button label="Submit" onclick="{!c.show}"/>
+</aura:component>

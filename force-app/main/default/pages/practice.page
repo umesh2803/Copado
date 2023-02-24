@@ -1,0 +1,15 @@
+<apex:page >
+    #tooltip:hover .tooltiptext {
+    white-space: normal;
+    visibility: visible;
+    word-wrap:break-word;
+    overflow-wrap: break-word; 
+}
+    <apex:pageBlock title="My Content" rendered="{!$User.UITheme == 'Theme2'}">
+        // this is the old theme...
+    </apex:pageBlock>
+
+    <apex:pageBlock title="My Content" rendered="{!$User.UITheme == 'Theme3'}">
+       // this is the classic theme ...
+    </apex:pageBlock>
+</apex:page>

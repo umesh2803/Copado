@@ -1,0 +1,27 @@
+<apex:page id="pg" >
+    <apex:form id="fm">
+        <apex:inputText id="Name" onmousedown="show()"/>
+        <script>
+        function show()
+        { 
+            
+            
+            var myname=document.getElementById('{!$Component.name}').value;
+            alert(myname);
+            
+        }
+        
+        
+        
+        </script>
+    
+    
+    
+    
+    
+    
+    
+    </apex:form>
+               
+    
+</apex:page>

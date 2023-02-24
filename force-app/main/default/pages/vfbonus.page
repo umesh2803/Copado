@@ -1,0 +1,30 @@
+<apex:page controller="vfbonus">
+    <apex:form >
+        <apex:pageBlock >
+          <apex:pageBlockButtons >
+            <apex:commandButton value="save" action="{!main}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+          
+            <apex:outputLabel > city </apex:outputLabel>
+                <apex:inputText value="{!city}"/>
+              
+                
+                <apex:outputLabel > experience </apex:outputLabel>
+                <apex:inputText value="{!experience}"/>
+                
+              
+                <apex:outputLabel > salary </apex:outputLabel>
+                <apex:inputText value="{!salary}"/>
+                  
+                <apex:outputLabel > bonus </apex:outputLabel>
+                <apex:inputText value="{!bonus}"/>
+                
+                
+            
+            </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

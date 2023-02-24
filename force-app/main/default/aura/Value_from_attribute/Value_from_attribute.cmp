@@ -1,0 +1,29 @@
+<aura:component >
+    <aura:attribute name="aval" type="integer" />
+    <aura:attribute name="bval" type="integer" />
+    <aura:attribute name="Result" type="integer" />
+    <aura:attribute name="num" type="integer" default="10"/>
+    <ui:inputNumber label="Enter age" aura:id="num" value="{!v.num}"/>
+
+    <div>
+        aval  : {!v.aval} <br/> <br/>
+        baval : {!v.bval}<br/> <br/>
+        Result: {!v.Result}<br/> <br/>
+    
+    
+        <lightning:button label="add" variant="brand" onclick="{!c.addme}" />
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
+</aura:component>

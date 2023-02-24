@@ -1,0 +1,37 @@
+<aura:component controller="YRDpractice" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="AccountList" type="List" />
+    <aura:attribute name="AccountID" type="string"/>
+    <aura:attribute type="date" name="Fromdate" />
+    <aura:attribute type="date" name="Todate" />
+    <aura:attribute type="Boolean" name="showdata" default="false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.loadaccount}" />
+    
+    <!--<lightning:select aura:id="select" name="select" label="Account" onchange="{! c.onChange }">
+        <option value="">choose one...</option>
+         <aura:iteration items="{!v.AccountList}" var="a" >
+         <option value="{!a.Id}">{!a.Name}</option> 
+         </aura:iteration>
+    </lightning:select>-->
+   <div class="slds-card">
+    <lightning:layout multipleRows="true" >
+    <lightning:layoutitem size="4">
+        <lightning:combobox name="general" label="ACCOUNTS" placeholder="Select an Option" options="{! v.AccountList }" value="{!v.AccountID}" onchange="{!c.onChange}"/>
+	</lightning:layoutitem>
+        <lightning:layoutitem size="3">
+         <lightning:input type="date" name="Fromdate" label="FROM DATE" placeholder="type here..." value="{!v.Fromdate}"/>
+        </lightning:layoutitem>
+         <lightning:layoutitem size="3">
+         <lightning:input type="date" name="TOdate" label="TO DATE" placeholder="type here..." value="{!v.Todate}"/>
+        </lightning:layoutitem >
+       <lightning:layoutitem size="2">
+        <lightning:button name="show" label="Show" variant="brand" onclick="{!c.showPolicy}"/>
+           <lightning:button name="show" label="Refresh" variant="base" onclick="{!c.refresh}"/>
+        
+     </lightning:layoutitem>
+    </lightning:layout>
+       </div>
+    <aura:if isTrue="{!v.showdata}">
+    <c:YRD_Practice_child accountID="{!v.AccountID}" Fromdate="{!v.Fromdate}" Todate="{!v.Todate}" aura:id="inline" />
+   </aura:if>
+    </aura:component>

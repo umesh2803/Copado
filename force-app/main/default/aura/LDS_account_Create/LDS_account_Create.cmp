@@ -1,0 +1,30 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="ConObj" type="object" />
+    <aura:attribute name="simpleConObj" type="object" />
+    <aura:attribute name="ObjError" type="string" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.Createhandler}"/>
+   
+    <force:RecordData aura:id="createRecord"
+                      fields="LastName,FirstName,Phone"
+                      targetRecord="{!v.ConObj}"
+                      targetFields="{!v.simpleConObj}"
+                      targetError="{!v.ObjError}"
+                      />
+    <lightning:card iconName="Standard:Account" title="Create contact" >
+    <div class="slds-p-hrizontal_small">
+        <lightning:input label="contact LastName" value="{!v.simpleConObj.LastName}"/>
+    </div>
+    <div class="slds-p-hrizontal_small">
+        <lightning:input label="Contact FirstName" value="{!v.simpleConObj.FirstName}"/>
+    </div>
+    <div class="slds-p-hrizontal_small">
+        <lightning:input label="contact PPhone" value="{!v.simpleConObj.Phone}"/>
+    </div>
+    </lightning:card>
+    <div class="slds-p-around--large">
+        <lightning:button label="Insert" onclick="{!c.invoke}" />
+    
+    
+    </div>
+</aura:component>

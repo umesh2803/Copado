@@ -1,0 +1,19 @@
+<aura:component >
+   
+    <lightning:layout multipleRows="true">
+    <lightning:layoutItem size="12">
+       
+      <c:TotalPolicyParClient />
+    </lightning:layoutItem>
+    <lightning:layoutItem size="12">
+       
+	  <c:paymentPlandetails />       
+    </lightning:layoutItem>
+    </lightning:layout>
+ 
+    
+    
+    
+    
+    
+</aura:component>

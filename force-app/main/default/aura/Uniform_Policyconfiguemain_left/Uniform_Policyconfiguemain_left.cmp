@@ -1,0 +1,75 @@
+<aura:component >
+    <aura:attribute name="ClientId" type="string" />
+    <aura:attribute name="PolicyId" type="string" />
+    <div class="slds-card">
+   <lightning:layout multipleRows="true">
+        <aura:if isTrue="{!v.ClientId != null}">
+        <lightning:layoutitem size="12" flexibility="true">
+             <lightning:recordViewForm 
+                                 recordId="{!v.ClientId}"
+                                 objectApiName="Account"
+                                
+                                       >
+       <lightning:layout multipleRows="true">
+        <lightning:layoutitem size="6" flexibility="true">
+            <lightning:outputField fieldName="Industry"  />
+        </lightning:layoutitem>
+        <lightning:layoutitem size="6" flexibility="true">
+         <lightning:outputField fieldName="Phone"  />
+        </lightning:layoutitem>
+        <lightning:layoutitem size="6" flexibility="true">
+        <lightning:outputField fieldName="Rating"  />
+        </lightning:layoutitem>
+    </lightning:layout>  
+   </lightning:recordViewForm>
+  
+       </lightning:layoutitem>
+       
+            </aura:if>
+       <lightning:layoutitem size="12">
+           <aura:if isTrue="{!v.PolicyId != null}">
+           
+   <lightning:recordEditForm
+        objectApiName="Insurance_Policy__c"
+        class="editform"
+        onload="{!c.handleload}" 
+        onsuccess="{!c.handlesucces}"
+                             >
+       <lightning:messages aura:id="error" />
+        <lightning:layout multipleRows="true">
+       <lightning:layoutitem  size="6" flexibility="true">
+           <lightning:inputField fieldName="Account__c" value="{!v.ClientId}" />
+        </lightning:layoutitem>
+       <lightning:layoutitem size="6" flexibility="true">
+           <lightning:inputField fieldName="Policy__c" value="{!v.PolicyId}" />
+        </lightning:layoutitem >
+       <lightning:layoutitem size="6" flexibility="true">
+           <lightning:inputField fieldName="Internal_Wholesaler__c" />
+        </lightning:layoutitem>
+             <lightning:layoutitem  size="6" flexibility="true">
+        <lightning:inputField fieldName="Premium__c" aura:id="premium" />
+        </lightning:layoutitem>
+             <lightning:layoutitem  size="6" flexibility="true">
+       <lightning:inputField fieldName="Renewal_Term__c" />
+        </lightning:layoutitem>
+             <lightning:layoutitem  size="6" flexibility="true">
+       <lightning:inputField fieldName="Purchase_Date__c" />
+        </lightning:layoutitem>
+            <lightning:layoutitem  size="6" flexibility="true">
+       <lightning:inputField fieldName="Expired_Date__c" />
+        </lightning:layoutitem>
+             <lightning:layoutitem  size="6" flexibility="true">
+        <lightning:button variant="brand" label="create" title="create" type="submit"/>
+        </lightning:layoutitem>  
+       
+       
+       </lightning:layout>
+               </lightning:recordEditForm>
+           
+           
+           </aura:if>
+       
+       </lightning:layoutitem>
+       </lightning:layout>
+    </div>
+</aura:component>

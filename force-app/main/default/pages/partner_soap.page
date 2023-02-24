@@ -1,0 +1,51 @@
+<apex:page controller="Soap_exampleclc">
+    <apex:form >
+		<apex:pageBlock title="login credentials">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Login" action="{!login}" reRender="one"/>
+              </apex:pageBlockButtons>
+           
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="user name" />
+                    
+						<apex:inputText value="{!username}"/>                    
+                   
+                 </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="password" />
+                    
+						<apex:inputText value="{!password}"/>                    
+                   
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="contact lastname" />
+                    
+						<apex:inputText value="{!conlastname}"/>                    
+                   
+                 </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="contact firstname" />
+                    
+						<apex:inputText value="{!confirstname}"/>                    
+                   
+                 </apex:pageBlockSectionItem>
+                             <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="contact phone" />
+                    
+						<apex:inputText value="{!conphone}"/>                    
+                   
+                 </apex:pageBlockSectionItem>
+            
+            
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" id="one">
+            <apex:outputLabel value="{!result}"  />
+                <apex:outputLabel value="{!status}"  />
+             </apex:pageBlockSection> 
+        
+        
+        </apex:pageBlock>    
+    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,23 @@
+<apex:page controller="pagesnextprevious">
+    <apex:form >
+    <apex:pageBlock title="Opportunity" id="one"> 
+    <apex:pageBlockButtons location="top">
+ <apex:commandButton value="First" rendered="{!controller.hasprevious}" action="{!controller.first}" reRender="one"/>
+ <apex:commandButton value="Previous" rendered="{!controller.hasprevious}" action="{!controller.Previous}" reRender="one"/>
+ <apex:commandButton value="Next" rendered="{!controller.hasnext}" action="{!controller.next}" reRender="one"/>
+ <apex:commandButton value="Last" rendered="{!controller.hasnext}" action="{!controller.last}" reRender="one"/>
+     
+        </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!opty}" var="a">
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.stagename}"/>
+            <apex:column value="{!a.closedate}"/>
+        
+        
+        </apex:pageBlockTable>
+        {!controller.pageNumber} of {!controller.resultsize}
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

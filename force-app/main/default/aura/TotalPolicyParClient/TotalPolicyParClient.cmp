@@ -1,0 +1,11 @@
+<aura:component controller="YRD_AURA">
+    <aura:attribute name="total" type="integer" />
+    <aura:handler event="c:EVENT_YRD_AP" action="{!c.showpolicy}" />
+    
+     <lightning:avatar fallbackIconName="standard:person_account" alternativeText="account" />
+     
+     <div class="slds-card slds-align--absolute-center slds-p-around--x-large box slds-m-around--large">
+         {!v.total}
+      </div>
+
+</aura:component>

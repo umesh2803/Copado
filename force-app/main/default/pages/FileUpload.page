@@ -1,0 +1,32 @@
+<apex:page standardController="opportunity" sidebar="false">  
+    <apex:includeScript value="/lightning/lightning.out.js" />  
+    
+    <apex:includeLightning />
+    <script>
+  
+     if("{!$CurrentPage.parameters.opportunityId}" != '' &&  "{!$CurrentPage.parameters.opportunityId}" != undefined)
+    {
+   
+        var opportunityId = "{!$CurrentPage.parameters.opportunityId}";
+         $Lightning.use("c:FileStatementAPP", function() {
+        $Lightning.createComponent(
+            "c:FileStatementCMP",
+            {  
+                parentId: opportunityId
+            },
+            "lightning",
+            function(cmp) {
+                console.log("Component created!");
+                console.log(cmp);
+            });
+    });
+    }
+   
+    console.log('opportunityId Id is ' + opportunityId);
+    
+  
+   
+    
+    </script> 
+    <div id="lightning"></div>
+</apex:page>

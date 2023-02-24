@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable">
+    
+    <div class="c-container">
+        <lightning:layout>
+        <lightning:layoutitem size="12" class="slds-card plsection" padding="around-medium" flexibility="true">
+           <c:Uniform_ParentLeftSection /> 
+        </lightning:layoutitem>
+        
+         
+        
+        
+       </lightning:layout>
+    
+  </div>
+    
+</aura:component>

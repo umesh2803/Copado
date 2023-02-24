@@ -1,0 +1,52 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"  >
+    <aura:attribute name="name" type="string" default="YRD CHAMP" />
+    <aura:attribute name="Number" type="integer" />
+    <aura:attribute name="value" type="boolean" default="false" />
+    <aura:attribute name="Date" type="Date" default="2021-12-15"/>
+    <aura:attribute name="Acc" type="Account" default="{'sobjectType':'Account','Name':'Umesh','Lastname':'rathod'}"/>
+    
+    <aura:attribute name="Accobj" type="Account[]" default="[{'sobjectType':'Account','Name':'Umesh','Lastname':'rathod'},{'sobjectType':'Account','Name':'john','Lastname':'cena'}]" />
+    Accounts:
+    <aura:iteration items="{!v.Accobj}" var="s">
+       <div>{!s.Name}&nbsp;{!s.Lastname}</div>
+    </aura:iteration>
+    
+    <aura:attribute name="conobj" type="contact" default="{'sobjectType':'contact','Name':'Umesh'}" />
+    <br/>
+    <aura:attribute name="favoriteColors" type="string[]" default="['cyan', 'yellow', 'magenta']"/>
+    colors:
+    <aura:iteration items="{!v.favoriteColors}" var="s">
+       <p>{!s}</p> 
+    </aura:iteration>
+    recordId :{!v.recordId}
+ --------------------------------------------------------------------------------------------   
+  <!--comment --> 
+<div>
+    <img src="{!$Resource.naturepng}"/><br/>
+    <aura:if isTrue="{!$Browser.formFactor=='PHONE'}">
+          you are currenty using desktop mode.<br/>
+    <aura:set attribute="else">
+    <aura:if isTrue="{!$Browser.formFactor=='DESKTOP'}">
+    Header :{!v.name}  <br/> 
+    boolean:{!v.value}<br/>
+    mode  :{!$Browser.formFactor}<br/>
+        </aura:if>
+        </aura:set>
+    </aura:if>
+    </div> 
+    code  :{!$Browser.formFactor}<br/>
+    custom label :{!$Label.c.On_click}<br/>
+    Account :{!v.Acc.Name}<br/>
+    <img src="{!$Resource.naturejpeg}"/><br/>
+    
+    <!-- <aura:if isTrue="{!and(v.value, v.name != 'YRD CMP')}"> -->
+-----------------------------------------------------------------------------------------------    
+    <div>
+        <lightning:input label="Date of Birth" type="Date" name="dob" onchange="{!c.change}" /> 
+    </div>
+   
+  <div class="slds-card slds-p-around-medium cascad">
+      <lightning:button label="submit" variant="brand" onclick="{!c.show}"/>
+ </div> 
+        
+</aura:component>

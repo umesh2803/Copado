@@ -1,0 +1,23 @@
+<aura:component >
+    <aura:attribute name="step" type="string" />
+    <aura:attribute name="opt" type="string" />
+	<lightning:select name="progess bar" label="progess bar value" value="{!v.step}" >
+        <option value="1">step 1</option>
+        <option value="2">step 2</option>
+        <option value="3">step 3</option>
+        <option value="4">step 4</option>
+        <option value="5">step 5</option>
+   </lightning:select>
+    
+    
+    
+  <lightning:progressIndicator currentStep="{!v.opt}" type="path"  variant="base" aura:id="get">
+        <lightning:progressStep label="step 1" value="1" />
+        <lightning:progressStep label="step 2" value="2" />
+        <lightning:progressStep label="step 3" value="3" />
+        <lightning:progressStep label="step 4" value="4" />
+        <lightning:progressStep label="step 5" value="5" />
+        <lightning:progressStep label="step 6" value="6" />
+   </lightning:progressIndicator>
+    <lightning:button label="select" onclick="{!c.show}" />
+</aura:component>

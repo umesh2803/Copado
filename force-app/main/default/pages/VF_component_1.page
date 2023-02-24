@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:includeLightning />
+    <div id="lightning" />
+    <script>
+    $Lightning.use("c:VF_component_1_ap",function(){
+    			
+        $Lightning.createComponent("c:VF_component_1",{},"lightning",function(component)
+                                   {
+                                   
+                                   });
+        });
+    
+    </script>
+        
+   
+</apex:page>

@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction">
+	
+    <lightning:layout multipleRows="true" >
+    <lightning:layoutItem size="7" >
+            <c:ParentLeftSection />
+    </lightning:layoutItem>
+  
+    <lightning:layoutItem size="5" class="slds-card box slds-theme_shade slds-theme_alert-texture">
+        <c:ParentRightSection />      
+    </lightning:layoutItem>
+
+    </lightning:layout>
+    
+    
+    
+    
+    
+   
+</aura:component>
