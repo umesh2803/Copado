@@ -4,7 +4,7 @@ public class new_account {
         acc.Name='gitbottom';
         insert acc;
     }
-      public new_account1() {
+      public  void new_account1() {
         account acc=new account();
         acc.Name='gitbottom';
         
