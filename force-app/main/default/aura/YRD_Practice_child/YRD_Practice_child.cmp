@@ -1,0 +1,18 @@
+<aura:component controller="YRDpractice">
+    <aura:attribute name="accountID" type="string" />
+    <aura:attribute type="date" name="Fromdate" />
+    <aura:attribute type="date" name="Todate" />
+    <aura:attribute type="List" name="policyList" />
+     <aura:attribute name="onch" type="string" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.showpolicy}" />
+    
+    <aura:iteration items="{!v.policyList}" var="a">
+    <p>{!a.Name}</p>
+    
+    </aura:iteration>
+    
+    
+    
+    
+</aura:component>

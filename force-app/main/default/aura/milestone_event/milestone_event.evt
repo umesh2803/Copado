@@ -1,0 +1,11 @@
+<aura:event type="APPLICATION" >
+		
+    <aura:attribute name="policyID" type="string" />
+    <aura:attribute name="premium" type="integer" />
+    <aura:attribute name="renewal" type="string" />
+    
+
+
+
+
+</aura:event>

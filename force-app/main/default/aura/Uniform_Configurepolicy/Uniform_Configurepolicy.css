@@ -1,0 +1,9 @@
+.THIS .plsection {
+    background-image:url(/resource/PolicyConfiguratorBackground);
+    background-position:centre;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.THIS .slds-card+.slds-card{
+    margin-top:0px;
+}

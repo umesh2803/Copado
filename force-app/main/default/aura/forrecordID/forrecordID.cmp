@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"  >
+    
+    
+    <b>This is recordID {!v.recordId} </b><br/>
+    
+</aura:component>

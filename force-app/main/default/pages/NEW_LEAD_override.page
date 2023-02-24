@@ -1,0 +1,31 @@
+<apex:page standardController="Lead" extensions="NEW_LEAD_OverrideButton" setup="false">
+    <apex:sectionHeader title="Lead" subtitle="New Lead"/>
+    <apex:form >
+        <apex:messages style="font-size:20px;color:red"/>
+     	<apex:pageBlock >
+        <apex:pageBlockButtons location="top"  >
+            <apex:commandButton value="save" action="{!create}" style="margin-left:180px" />
+            <apex:commandButton value="cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Basic Information" collapsible="false">
+            <apex:inputField value="{!lead.lastname}"/>
+            <apex:inputField value="{!lead.Industry}"/>
+            <apex:inputField value="{!lead.firstname}"/>
+            <apex:inputField value="{!lead.Category__c}"/>
+            <apex:inputField value="{!lead.company}"/>
+            <apex:inputField value="{!lead.LeadSource}"/>
+       </apex:pageBlockSection>
+             <apex:pageBlockSection title="Basic Information" collapsible="false">
+            <apex:inputField value="{!lead.Birthday__c}"/>
+            <apex:inputField value="{!lead.Receive_SMS__c}"/>
+            <apex:inputField value="{!lead.Anniversary__c}"/>
+            <apex:inputField value="{!lead.Recieve_Email__c}"/>
+            <apex:inputField value="{!lead.phone}"/>
+            <apex:inputField value="{!lead.email}"/>
+            <apex:inputField value="{!lead.LeadSource}"/>
+            <apex:inputField value="{!lead.City__c}"/>
+            <apex:inputField value="{!lead.address__c}"/>
+       </apex:pageBlockSection>
+        </apex:pageBlock>>
+    </apex:form>
+</apex:page>

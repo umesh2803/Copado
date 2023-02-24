@@ -1,0 +1,20 @@
+<aura:component controller="Toast_navigation">
+    <aura:attribute name="Name" type="string" />
+     <aura:attribute name="Phone" type="string" />
+  
+    <aura:attribute name="recordId" type="string" />
+    
+    <lightning:card iconName="standard:account" title="Account">
+        <aura:set attribute="actions">
+        <lightning:buttonGroup>
+            <lightning:button label="save" variant="brand" onclick="{!c.invoke}"/>
+            <lightning:button label="cancel" variant="narrow" onclick="{!c.createRecord}"/>
+       </lightning:buttonGroup>
+       </aura:set>
+        <lightning:input  name="name"  label="Name" value="{!v.Name}" />
+        <lightning:input  name="Phone" label="Phone" value="{!v.Phone}"/>
+       
+    </lightning:card>
+        
+    {!v.recordId}
+</aura:component>

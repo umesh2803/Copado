@@ -1,0 +1,15 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock >
+    <apex:pageBlockSection >
+        <apex:commandLink value="xyz"/>
+    </apex:pageBlockSection>
+        <apex:pageBlockSection >
+        <apex:commandLink value="xyz"/>
+    </apex:pageBlockSection>
+    
+    
+    </apex:pageBlock>
+    </apex:form>
+               
+</apex:page>

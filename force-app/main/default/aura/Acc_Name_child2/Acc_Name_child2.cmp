@@ -1,0 +1,25 @@
+<aura:component controller="Contact_list_AURA" >
+    <aura:attribute name="myList" Type="Contact[]" />
+    <aura:handler event="c:Acc_Name" action="{!c.invoke}" />
+  
+    <table width="100%">
+    <tr width="100%">
+		<th>Last Name</th> 
+        <th>First Name</th>
+        <th>Phone</th>
+        
+        </tr>
+        <aura:iteration items="{!v.myList}" var="a">
+    <tr width="100%">
+		<th>{!a.LastName}</th> 
+        <th>{!a.FirstName}</th>
+        <th>{!a.Phone}</th>
+        
+        </tr>
+
+   </aura:iteration>
+        </table>
+    
+    
+       
+</aura:component>

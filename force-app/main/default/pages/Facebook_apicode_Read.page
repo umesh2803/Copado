@@ -1,0 +1,3 @@
+<apex:page controller="Facebook_API" action="{!Readcode}">
+    {!code}
+</apex:page>

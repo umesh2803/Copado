@@ -1,0 +1,46 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" >
+    <aura:attribute name="recordId" type="string" />
+    <aura:attribute name="targetRecord" type="object" />
+    <aura:attribute name="newAcc" type="object" />
+    <aura:attribute name="error" type="string" />
+    <force:recordData aura:id="record"
+                      recordId="{!v.recordId}"
+                      layoutType="FULL"
+                      fields="Id,Name,Phone,Rating"
+                      targetRecord="{!v.targetRecord}"
+                      targetFields="{!v.newAcc}"
+                      targetError="{!v.error}"
+                      mode="EDIT"
+                      recordUpdated="{!c.handleRecordUpdated}"
+                      />
+    <lightning:card iconName="standard:account" title="{!v.newAcc.Name}">
+    <div class="slds-p-horizontal_small">
+        <p class="slds-p-horizontal_small">
+          <b>Name :</b>  <lightning:formattedText value="{!v.newAcc.Name}" />
+        </p>
+        <p class="slds-p-horizontal_small">
+          <b>Phone :</b>  <lightning:formattedText value="{!v.newAcc.Phone}" />
+        </p>
+        <p class="slds-p-horizontal_small">
+          <b>Rating :</b>  <lightning:formattedText value="{!v.newAcc.Rating}" />
+        </p>
+     </div>
+         </lightning:card>    
+   
+    <aura:if isTrue="{!not(empty(v.error))}">
+    <div>
+        <p class="slds-p-horizontal_small">{!v.error}</p>
+   </div>
+     </aura:if>
+    <lightning:card iconName="standard:account" title="Account">
+      <div class="slds-p-horizontal_small">
+     <p class="slds-p-horizontal_small"><lightning:input label="Name" value="{!v.newAcc.Name}"/></p>
+     <p class="slds-p-horizontal_small"><lightning:input label="Phone" value="{!v.newAcc.Phone}"/></p>
+    <p class="slds-p-horizontal_small"><lightning:input label="Rating" value="{!v.newAcc.Rating}"/></p>
+           </div>
+        <div class="slds-p-around--large">
+        <lightning:button label="save" onclick="{!c.invoke}"></lightning:button></div>
+     </lightning:card>
+                      
+	
+</aura:component>

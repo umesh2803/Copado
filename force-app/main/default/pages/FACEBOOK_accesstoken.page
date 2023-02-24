@@ -1,0 +1,22 @@
+<apex:page controller="Facebook_API">
+     <apex:form >
+         <apex:pageBlock title="Facebook TOken">
+         <apex:pageBlockButtons location="Top">
+             <apex:commandButton value="Get Token" action="{!requestToken}"/>
+         </apex:pageBlockButtons>
+             <apex:pageBlockSection columns="1">
+           
+                  <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Accesstoken"  />
+                      <apex:outputText value="{!Accesstoken}"/>
+                </apex:pageBlockSectionItem>
+            
+            </apex:pageBlockSection>
+         
+         
+         
+         </apex:pageBlock>
+    
+    
+    </apex:form>
+</apex:page>

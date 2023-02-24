@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <lightning:card class="background-color: var(-g-cloud-blue-vibrant-90)">
+    <a class="dx-card-news dx-card-base dx-card-size-normal" style="background-color: var(-g-cloud-blue-vibrant-90); color: var(-g-blue-vibrant-20);" href="https://help.salesforce.com/s/articleView?id=release-notes.rn_development.htm" part="container"><div class="text small"><h3 class="dx-text-heading-3">Salesforce Release Notes</h3><p>Learn what’s new with Lightning components, Visualforce, Apex, and APIs, so you can use the latest tools and technologies in your development.</p><div class="cta"><button>Read the Release Notes</button></div></div></a>
+    </lightning:card>
+    
+</aura:component>

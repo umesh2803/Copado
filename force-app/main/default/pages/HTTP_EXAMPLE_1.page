@@ -1,0 +1,9 @@
+<apex:page controller="HTTP_scan_1" setup="true">
+    <apex:form >
+    	<apex:inputText size="100" value="{!endpoint}"/>
+        <apex:commandButton value="submit" action="{!call}"/>
+        <br/><br/>
+        <apex:inputTextarea cols="50" rows="10" value="{!body}"/>
+    
+    </apex:form>
+</apex:page>

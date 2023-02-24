@@ -1,0 +1,27 @@
+<aura:component >
+	<table>
+    	<tr>
+          <th>Name</th>
+            <th>phone</th>
+        </tr>
+        <tr>
+          <th>samrat</th>
+            <th>123456</th>
+        </tr>
+       
+  </table>
+    
+    
+    <div style="background-color: #16325c;
+    padding: 12px;
+    color: #fff;margin:10px 0 10px;fontsize:10px">
+        <h4>Utility icon in different sizes</h4>
+         <lightning:icon iconName="utility:connected_apps" alternativeText="Connected" size="large" title="large size" />
+         <lightning:icon iconName="utility:connected_apps" alternativeText="Connected" title="medium (default)" />
+         <lightning:icon iconName="utility:connected_apps" alternativeText="Connected" size="small" title="small size" />
+         <lightning:icon iconName="utility:connected_apps" alternativeText="Connected" size="x-small"
+            title="x-small size" />
+        <lightning:icon iconName="utility:connected_apps" alternativeText="Connected" size="xx-small"
+            title="xx-small size" />
+    </div>
+</aura:component>

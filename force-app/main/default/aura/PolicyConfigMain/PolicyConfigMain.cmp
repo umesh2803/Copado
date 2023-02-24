@@ -1,0 +1,103 @@
+<aura:component controller="YRD_AURA">
+	 <aura:attribute name="SelectedAccount" type="string" />
+     <aura:attribute name="Selectedpolicy" type="string" />
+     <aura:attribute name="recordId" type="string" />
+    <aura:attribute name="premium" type="string" />
+    <aura:attribute name="record" type="Object"/>
+     <aura:attribute name="show" type="boolean"/>
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="check" type="boolean" default="false"/>
+     <aura:attribute name="milecheck" type="boolean" default="false"/>
+    
+    <aura:registerEvent type="c:EVENT_YRD" name="reset"/>
+    <aura:registerEvent type="c:milestone_event" name="mildstone"/>
+    
+  
+    
+  <!--  <aura:handler name="init" value="{!this}" action="{!c.invoke}" /> -->
+    <aura:method name="ParentRefresh" action="{!c.ParentRefresh}" />
+   <!-- <force:recordView recordId="{!v.SelectedAccount}" /> -->
+ <!--   <force:recordData aura:id="recordLoader"
+      fields="Name"
+      recordId="{!v.SelectedAccount}"
+      targetRecord="{!v.record}"
+      targetFields="{!v.simpleRecord}"
+      targetError="{!v.recordError}"
+      recordUpdated="{!c.handleRecordUpdated}"
+                     
+      />-->
+    <div class="slds-card ">
+    <aura:if isTrue="{!v.SelectedAccount != null}" >
+        
+     <b>Account Information</b>
+     <lightning:recordViewForm recordId="{!v.SelectedAccount}"
+                              objectApiName="Account">
+    <lightning:layout multipleRows="true">
+        <lightning:layoutitem size="6"><b><lightning:outputField fieldName="Name" /></b></lightning:layoutitem>
+        <lightning:layoutitem size="6"><b><lightning:outputField fieldName="Phone" /></b></lightning:layoutitem>
+        <lightning:layoutitem size="6"><b><lightning:outputField fieldName="Type" /></b></lightning:layoutitem>
+        <lightning:layoutitem size="6"><b><lightning:outputField fieldName="Rating" /></b></lightning:layoutitem>
+        <lightning:layoutitem size="6"><b><lightning:outputField fieldName="NumberOfEmployees" /></b></lightning:layoutitem>
+        <lightning:layoutitem size="6"><b><lightning:outputField fieldName="AccountSource" /></b></lightning:layoutitem>
+        <lightning:layoutitem size="6"><b><lightning:outputField fieldName="ShippingAddress" /></b></lightning:layoutitem>
+        <lightning:layoutitem size="6"><b><lightning:outputField fieldName="BillingAddress" /></b></lightning:layoutitem>
+        </lightning:layout>
+    </lightning:recordViewForm>
+        
+    </aura:if>
+ <!--   
+<lightning:avatar fallbackIconName="standard:person_account" alternativeText="account" />
+ <lightning:card title="{!v.simpleRecord.Name}">
+    Name : <lightning:formattedText title="Name" value="{!v.simpleRecord.Name}" />
+ </lightning:card> -->
+    <aura:if isTrue="{!v.Selectedpolicy != null}" >
+        <b>Policy Information</b>
+    <lightning:recordEditform objectApiName="Insurance_Policy__c"
+                              onload="{!c.handleload}"
+                              onsuccess="{!c.handlesuccess}"
+                              onsubmit="{!c.handlesubmit}"
+                              Aura:id="recordEdit">
+        <lightning:messages aura:id="message"/>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutitem size="6">
+                <lightning:inputField fieldName="Account__c" value="{!v.SelectedAccount}" aura:id="acc"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem size="6">
+                <lightning:inputField fieldName="Internal_Wholesaler__c" aura:id="wholesaler"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem size="6">
+                <lightning:inputField fieldName="Policy__c" value="{!v.Selectedpolicy}" aura:id="poli"/>
+            </lightning:layoutitem>
+             <lightning:layoutitem size="6">
+                <lightning:inputField fieldName="Premium__c" aura:id="premiumfield" value="{!v.premium}" />
+            </lightning:layoutitem>
+             <lightning:layoutitem size="6">
+                <lightning:inputField fieldName="Purchase_Date__c" aura:id="purchase" />
+            </lightning:layoutitem>
+             <lightning:layoutitem size="6">
+                <lightning:inputField fieldName="Renewal_Term__c" aura:id="renewal"/>
+            </lightning:layoutitem>
+             <lightning:layoutitem size="6">
+                <lightning:inputField fieldName="Expired_Date__c" aura:id="expire"/>
+            </lightning:layoutitem>
+            <lightning:layoutitem size="12">
+               <lightning:input type="checkbox" label="please check this before save" name="input" value="{!v.check}" aura:id="checkin" onchange="{!c.changevalue}"/>
+            </lightning:layoutitem>
+           <lightning:layoutitem size="12" class="slds-align--absolute-center slds-p-around--medium">
+             <lightning:button  variant="brand" type="submit" label="Create new" />
+            <lightning:button  variant="Neutral" label="Mildstone" onclick="{!c.Totalpolicyhandle}"  />
+               <lightning:button  variant="Destructive"  label="cancel" onclick="{!c.resethandle}"/>
+            </lightning:layoutitem>
+           
+                
+ </lightning:layout>                									
+   </lightning:recordEditform>
+        
+  </aura:if>
+<!--     <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            {!v.recordError}</div>
+    </aura:if> -->
+    </div>
+</aura:component>

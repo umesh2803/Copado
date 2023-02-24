@@ -1,0 +1,134 @@
+<apex:page setup="false" showHeader="false" >
+    <apex:form >  
+       
+ <apex:pageBlock >
+        <apex:pageBlockSection columns="4" >
+        <apex:pageBlockSectionItem >
+            <apex:image value="{!$Resource.index}" width="30" height="20" dir="LTR" />
+      <apex:commandLink value="click for issue" onclick="parent.open('https://gate.iitkgp.ac.in/mail/')" style="font-size:150%"  />
+        </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+          
+          <apex:image value="{!$Resource.index1}" width="30" height="20"/>
+             <apex:commandLink value="call" style="font-size:150%"  />
+                </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+            
+    </apex:pageBlock>
+   
+    <apex:pageBlock >
+        <apex:image value="{!$Resource.sfdc}"/>
+    
+    </apex:pageBlock>
+        <apex:pageBlock >
+          
+              
+          
+            <h1 style="font-size:15px" >
+              
+ <apex:commandLink value="HOME" style="text-decoration: none;" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <apex:commandLink value="GATE 2022" onclick="parent.open('https://phonepay-dev-ed--c.visualforce.com/apex/GATE')" style="text-size:120px;text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <apex:commandLink value="DOWNLOAD INFORMATION" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <apex:commandLink value="OLD QUETION PAPER" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:commandLink value="EXAM CITIES" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <apex:commandLink value="REGISTRATION" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 <apex:commandLink value="FAQ" style="text-decoration: none;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:commandLink value="CONTACT US" onclick="parent.open('https://phonepay-dev-ed--c.visualforce.com/apex/gate1')"  style="text-decoration: none;"/>
+            
+            
+            </h1>
+                
+                 
+                
+        </apex:pageBlock>
+            <apex:pageBlock tabStyle="GATE_Student_Information__c"  >
+                <apex:pageBlockSection columns="2"   >
+                    
+               
+                   
+                       <apex:sectionHeader title="About"  subtitle="GATE 2022" 
+                     description="<h20 style=font-size:120%;color:black;Font-family:Arial;>The Graduate Aptitude Test in Engineering (GATE)  is an examination that primarily tests the 
+                comprehensive understanding of various undergraduate subjects in engineering and science for 
+                admission into the Masters Program and Recruitment by some Public Sector Companies.GATE 2022
+                is conducted by the Indian Institute of Technology Kharagpur and six other Indian Institutes
+                of Technology at Mumbai, Delhi, Guwahati, Kanpur, Chennai, Roorkee and  Indian Institute 
+                                  of 
+                Science at Bengaluru on behalf of the National Coordination Board – GATE, The Department of 
+                                  Higher Education, Ministry of Education (MoE), Government of India.<h20/><br/>   
+                   
+                        <h1>  Organising Institute for GATE 2022 is Indian Institute of Technology Kharagpur</h1>" /> 
+                  
+    <apex:sectionHeader subtitle="GATE 2022 Online Application "  description="<h20 style=font-size:120%;color:black;Font-family:arial>Attend scrutiny defects and rectify the errors in the application at the earliest, contact GATE Office in your Zone for clarifications if any.
+                                                                               <h20/>"/>
+                    <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem dataStyle="background:skyblue" >
+                    <apex:commandLink value="
+			        Time window for modifications in GATE 2022 Application (Extra fee applicable): November 01 to 12, 2021. 
+                                             Click for Details."/>
+                        </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                    </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem dataStyle="background:skyblue;text-align:justify">
+                    
+                   We regret to inform that the exam cities Sonepat, Panipat and Idukki have been cancelled. 
+                   Candidates selected these cities are requested to change the city choice without additional 
+                   fees.
+
+
+                   
+              </apex:pageBlockSectionItem>
+                     <apex:pageBlockSectionItem >
+                     </apex:pageBlockSectionItem>
+                    
+                    <apex:commandButton value="New User&Login" onclick="parent.open('https://phonepay-dev-ed--c.visualforce.com/apex/gatestudentinformation')" style="font-size:150%;width:100%;background:skyblue;margin-right:100px"/>
+              		
+                    </apex:pageBlockSection>
+                    
+                <apex:pageBlockSection >
+                
+                
+                </apex:pageBlockSection>
+                </apex:pageBlock>
+            <apex:pageBlock tabStyle="GATE_Student_Information__c" >
+              
+              <h1 style="font-size:100%">
+                  
+                <apex:sectionHeader title="Important" subtitle="Announcements" />
+                    <br/>
+               
+               
+               <apex:image width="30" height="20" value="{!$Resource.index}" />
+               <apex:commandLink value="Leh has been added as new exam city." style="font-size:150%;text-decoration: none;"/> 
+               
+ 					<br/><br/>              
+                <apex:image width="30" height="20" value="{!$Resource.index}"/>
+                 <apex:commandLink value="New paper in GATE2022." style="font-size:150%;text-decoration: none;margin-bottom:120px;"/> 
+              
+                     
+                     <br/><br/>
+                <apex:image width="30" height="20" value="{!$Resource.index}" style="margin:10"/>
+                 <apex:commandLink value="Old question Paper." style="font-size:150%;text-decoration: none;"/>
+               <br/><br/> </h1> 
+                 <apex:sectionHeader title="Important" subtitle="Dates" />
+             <h1 style="font-size:150%">  Opening date of online appliation - 
+                02nd Sep2022.
+                <br/><br/>
+                Closing Date of online application poratal -
+                30th Sep2022.
+                <br/><br/>
+                Admit card will be available for download - 
+                12th Nov2022
+                </h1>
+                
+                
+           </apex:pageBlock>
+            <apex:pageBlock >
+                <apex:image value="{!$Resource.iisc}"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:image value="{!$Resource.iitdelhi}"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:image value="{!$Resource.iitmadras}"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:image value="{!$Resource.iitkanpur}"/>
+            
+            
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

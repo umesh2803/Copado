@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:registerEvent name="one" type="c:Acc_Name" />
+   
+        <lightning:input aura:id="name" label="Account Name" />
+        
+        <lightning:buttonGroup>
+            <lightning:button label="Search" variant="brand" onclick="{!c.show}" />
+            <lightning:button label="cancel" onclick="{!c.call}" />
+        </lightning:buttonGroup>
+    
+    
+  
+</aura:component>

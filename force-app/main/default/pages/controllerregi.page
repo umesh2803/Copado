@@ -1,0 +1,52 @@
+<apex:page controller="controllerregi">
+    <apex:form >
+        <apex:pageMessages />
+       <apex:sectionHeader title="Registration" help="may i help u?"/>
+        <apex:pageBlock title="Bank Detail">
+            <apex:pageBlockButtons location="top">
+            <apex:commandButton value="save" action="{!controllerregi}"  />
+                <apex:commandButton value="cancel"/>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection title="Basic Information">
+               
+                
+                  <apex:outputText > name </apex:outputText>
+                    <apex:inputText value="{!cname}" />
+                    
+                    
+                <!--<apex:pageBlockSectionItem >
+                    <apex:outputLabel >Age</apex:outputLabel>
+                    <apex:inputText value="{!cemail}" />
+                        </apex:pageBlockSectionItem>-->
+                    
+               <!-- <apex:pageBlockSectionItem >
+                        <apex:outputLabel >Salary</apex:outputLabel>
+                    <apex:inputText value="{!b.Salary__c}" />
+                         </apex:pageBlockSectionItem>-->
+                    
+               
+                         <apex:outputText >Email</apex:outputText> 
+                    <apex:inputText value="{!cemail}" />
+                
+           
+                <!--<apex:pageBlockSectionItem >
+                   <apex:outputLabel > city </apex:outputLabel>
+                    <apex:selectList size="1" value="{!b.city__c}">
+                        <apex:selectOption itemLabel="none" itemValue="none" />
+                        <apex:selectOption itemLabel="pune" itemValue="pune" />
+                        <apex:selectOption itemLabel="mumbai" itemValue="mumbai" />
+                         <apex:selectOption itemLabel="nagpur" itemValue="nagpur" />
+                        
+                     </apex:selectList>
+                
+                
+                </apex:pageBlockSectionItem>-->
+            
+            
+            </apex:pageBlockSection>
+        
+        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,6 @@
+<aura:component >
+	<h1><p>Hiiiii</p></h1>
+    <h2><p>HOW</p></h2>
+    <h3><p>R</p></h3>
+    <h4><p>U</p></h4>
+</aura:component>

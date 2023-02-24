@@ -1,0 +1,16 @@
+<template>
+
+<template if:true={fname}>
+<h1>First Name is : Harry</h1>
+</template>
+
+<template if:false={lname}>
+    <h1>last Name is : Potter</h1>
+
+</template>
+
+<lightning-button variant="brand-outline" label="Show First Name" title="Show First Name" onclick={handlefirst} class="slds-m-left_x-small"></lightning-button>
+
+<lightning-button variant="brand-outline" label="Show Last Name" title="Show Last Name" onclick={handlelast} class="slds-m-left_x-small"></lightning-button>
+    
+</template>

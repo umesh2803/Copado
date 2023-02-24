@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Account List using for:each" icon-name="custom:custom63">
+    <template for:each={students} for:item="item">
+
+        <p key={students}>
+            Student Name : {item.Name} </br>
+            Student Branch : {item.branch}
+        </p>
+
+    </template>
+</lightning-card> 
+</template>

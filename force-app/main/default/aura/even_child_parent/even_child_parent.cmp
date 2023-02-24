@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="myname" type="string" />
+    <aura:handler name="firstcall" event="c:First_event" action="{!c.invoke}" />
+    <c:even_child />
+    <br/>
+    
+    myname :{!v.myname}
+    
+</aura:component>

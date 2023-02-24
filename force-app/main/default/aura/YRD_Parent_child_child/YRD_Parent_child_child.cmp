@@ -1,0 +1,67 @@
+<aura:component controller="YRD_AURA" implements="flexipage:availableForRecordHome,force:hasRecordId" >
+	 <aura:attribute type="String" name="clientId"/>
+      <aura:attribute type="date" name="Fromdate" />
+     <aura:attribute type="date" name="Todate" />
+    <aura:attribute type="List" name="InsureList" />
+    <aura:attribute type="Boolean" name="LoadedClients" default="false"/>
+    <aura:attribute type="string" name="recordId"/>
+    <aura:handler name="init" value="{!this}" action="{!c.actionW}" />
+    
+    <aura:method name="Refresh" action="{!c.RefreshClient}">
+        <aura:attribute name="reset" type="Boolean" default="false" />
+    
+    </aura:method>>
+     
+     <lightning:layout multipleRows="true" class="slds-card">
+     <lightning:layoutItem size="2" class="slds-p-around_medium slds-badge_inverse ">
+         <b>Acccount Name</b>
+        </lightning:layoutItem >
+		 <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox" >
+         <b>Name</b>
+        </lightning:layoutItem>      
+        <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox">
+         <b>Internal Wholesaler</b>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox" >
+         <b> Policy</b>
+        </lightning:layoutItem >
+       <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox" >
+         <b>Premium</b>
+        </lightning:layoutItem>
+         <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox" >
+         <b>Renewal Term</b>
+        </lightning:layoutItem>
+        
+        <aura:if isTrue="{!v.LoadedClients}">
+        <aura:iteration items="{!v.InsureList}" var="a">
+   
+        <lightning:layoutItem size="2" class="slds-p-around_medium slds-badge_inverse ">
+         {!a.Account__r.Name}
+        </lightning:layoutItem >
+         <lightning:layoutItem size="2" class="slds-p-around_medium ">
+         {!a.Name}
+        </lightning:layoutItem >
+       <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox">
+         {!a.Internal_Wholesaler__r.Employee_Name__c}
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox" >
+         {!a.Policy__r.Name}
+        </lightning:layoutItem >
+       <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox" >
+         <lightning:formattedNumber value="{!a.Premium__c}" style="currency" currencyCode="INR"/>
+          </lightning:layoutItem>
+         <lightning:layoutItem size="2" class="slds-p-around_medium slds-has-inline-listbox ">
+         {!a.Renewal_Term__c}
+        </lightning:layoutItem >
+            
+       </aura:iteration>
+            <aura:set attribute="else">
+            <div class="exampleHolder">
+        <lightning:spinner alternativeText="Loading" size="medium" />
+            </div>
+            </aura:set>
+        </aura:if>
+          </lightning:layout>
+</aura:component>

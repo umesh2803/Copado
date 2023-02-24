@@ -1,0 +1,37 @@
+<apex:page standardController="Bank__c">
+    <apex:form >
+        <apex:sectionHeader title="Bank" subtitle="Employee Information" help="may i help u?" />
+     <apex:pageBlock title="Registration Form" >
+          <apex:pageBlockButtons location="top">
+             <apex:commandButton value="save" action="{!save}"/>
+             <apex:commandButton value="cancel" action="{!cancel}"/>
+              <apex:commandButton value="save & new" action="{!Quicksave}"/>
+            <apex:commandButton value="list" action="{!list}"/>
+            <apex:commandButton action="{!view}" value="view" />
+          </apex:pageBlockButtons>
+        
+          <apex:pageBlockSection title="Basic Information" collapsible="false" columns="2">
+      
+              <apex:inputField value="{!Bank__c.name}"/> 
+             
+         
+         <apex:inputField value="{!Bank__c.Age__c}"/>
+          
+         <apex:inputField value="{!Bank__c.Salary__c}"/>
+         <apex:inputField value="{!Bank__c.Phone__c}"/>
+         <apex:inputField value="{!Bank__c.Email__c}"/>
+         
+              </apex:pageBlockSection>
+         
+         
+         
+         
+         
+         
+       
+        
+        </apex:pageBlock>
+    
+    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="Facebook_API" >
+    <apex:form >
+    	<apex:pageBlock title="Facebook Request">
+            <apex:pageBlockButtons location="Top">
+                <apex:commandButton value="Request code" action="{!requestCode}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Client_id"  />
+                    <apex:inputText value="{!clientID}" size="80" />
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Re_directurl"  />
+                    <apex:inputText value="{!callback}" size="80" />
+                </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="State"  />
+                    <apex:inputText value="{!state}" size="80" />
+                </apex:pageBlockSectionItem>
+            
+            
+            </apex:pageBlockSection>
+        
+        
+        </apex:pageBlock>
+     </apex:form>
+    
+</apex:page>

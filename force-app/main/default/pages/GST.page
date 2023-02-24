@@ -1,0 +1,71 @@
+<apex:page controller="GST">
+ <apex:form >
+     <apex:sectionHeader title="Invoice"/>
+        <apex:pageBlock >
+           <apex:pageBlockButtons location="top">
+               <apex:commandButton value="Calculate" action="{!cal}"/>
+           </apex:pageBlockButtons>
+    
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+             <apex:outputLabel value="Enter quantity">
+          </apex:outputLabel>
+             <apex:inputText value="{!quantity}"/>
+            </apex:pageBlockSectionItem>
+            <br/><br/>
+             <apex:pageBlockSectionItem >
+             <apex:outputLabel value="price">
+          </apex:outputLabel>
+             <apex:inputText value="{!price}"/>
+            </apex:pageBlockSectionItem>
+            <br/><br/>
+
+         <apex:pageBlockSectionItem >
+             <apex:outputLabel value="amount">
+          </apex:outputLabel>
+             <apex:inputText value="{!Amount}"/>
+            </apex:pageBlockSectionItem>
+            <br/><br/>
+            
+             <apex:pageBlockSectionItem >
+         <apex:outputLabel value="Discount">
+             </apex:outputLabel>
+             <apex:inputText value="{!Discount}"/>
+            </apex:pageBlockSectionItem>
+            <br/><br/>
+       
+         
+         <apex:pageBlockSectionItem >
+         <apex:outputLabel value="GST">
+             </apex:outputLabel>
+             <apex:inputText value="{!GST}"/>
+            </apex:pageBlockSectionItem>
+            <br/><br/>
+        
+         
+           <apex:pageBlockSectionItem >
+         <apex:outputLabel value="Finalamount">
+             </apex:outputLabel>
+             <apex:inputText value="{!Finalamount}"/>
+         </apex:pageBlockSectionItem>
+            
+            
+            
+            
+            </apex:pageBlockSection>
+     
+     
+     
+     
+     </apex:pageBlock>
+    
+   
+        
+
+
+
+
+
+
+  </apex:form>
+</apex:page>

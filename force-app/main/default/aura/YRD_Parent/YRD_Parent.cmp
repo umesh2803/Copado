@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <c:YRD_Parent_child />
+</aura:component>

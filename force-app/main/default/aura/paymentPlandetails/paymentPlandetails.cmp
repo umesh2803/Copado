@@ -1,0 +1,47 @@
+<aura:component controller="YRD_AURA">
+   <aura:attribute name="milelist" type="list" />
+    <aura:attribute name="showmile" type="boolean" default="false"/>
+    <aura:handler event="c:milestone_event" action="{!c.getmile}" />
+    
+        <aura:if isTrue="{!v.showmile}">
+        <div class="box">
+                <lightning:layout multipleRows="true">
+                
+                <lightning:layoutitem size="4" class="slds-align--absolute-center" >
+                  Name
+                </lightning:layoutitem>
+                <lightning:layoutitem size="4" class="slds-align--absolute-center" >
+                   Premium
+                  </lightning:layoutitem>
+                  <lightning:layoutitem size="4" class="slds-align--absolute-center" >
+                    Payment
+                  </lightning:layoutitem>
+               
+
+                </lightning:layout>
+            </div>
+        <div>
+                <lightning:layout multipleRows="true">
+                <aura:iteration items="{!v.milelist}" var="mile">
+                <lightning:layoutitem size="4" padding="around_medium" class="slds-p-around--small slds-align--absolute-center">
+                  {!mile.Name}
+                </lightning:layoutitem>
+                <lightning:layoutitem size="4" padding="around_medium" class="slds-p-around--small slds-align--absolute-center">
+                    <lightning:formattedNumber value="{!mile.Premium__c}" style="currency" currencyCode="USD"/>
+                  </lightning:layoutitem>
+                  <lightning:layoutitem size="4" class="slds-p-around--small slds-align--absolute-center">
+                    {!mile.Payment_Status__c}
+                  </lightning:layoutitem>
+                </aura:iteration>
+
+                </lightning:layout>
+              </div>
+              <aura:set attribute="else">
+               <div class="slds-align--absolute-center slds-color-picker__hue-slider"> 
+              <b>No policy</b>
+            </div>
+              
+              </aura:set>
+ </aura:if>
+       
+</aura:component>

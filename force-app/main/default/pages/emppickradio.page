@@ -1,0 +1,77 @@
+<apex:page controller="emppickradio" >
+    <apex:form >
+        <apex:sectionHeader title="Employee" subtitle="New Employee" help="Help for this page"/>
+        <apex:pageBlock title="Employee Registration" id="one">
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="save" />
+                <apex:commandButton value="cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Basic Information">
+               <apex:pageBlockSectionItem >
+                lastname :<apex:inputText />
+                </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                Pancard : <apex:inputSecret />    
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                First Name : <apex:inputText />    
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                     <apex:outputLabel value="Technology" />
+                <apex:selectCheckboxes value="{!Technology}" > 
+                     <apex:selectOption itemLabel="Admin" itemValue="Admin" />
+                     <apex:selectOption itemLabel="Develeopment" itemValue="Develeopment" /> 
+                     </apex:selectCheckboxes>
+                 </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                city:  <apex:selectlist size="1" value="{!city}">
+                    <apex:selectOption itemLabel="none--" itemValue="none--" />
+                    <apex:selectOption itemLabel="pune" itemValue="pune" />
+                    <apex:selectOption itemLabel="hyd" itemValue="hyd" />  
+                    <apex:selectOption itemLabel="mumbai" itemValue="mumbai" />
+                 
+                         
+                   </apex:selectlist>
+                    
+       </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                Gender : <apex:selectRadio value="{!Gender}">
+                    <apex:selectOption itemLabel="male" itemValue="male" />
+                    <apex:selectOption itemLabel="female" itemValue="female" />
+                          </apex:selectRadio>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                 Address : <apex:inputTextarea />
+                
+                </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                permanent Address : <apex:inputTextarea />
+                
+                </apex:pageBlockSectionItem>
+            
+            
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+            Basic Information : {!Technology}
+                
+            
+            
+            
+            </apex:pageBlockSection>
+            
+            
+                   
+        
+        
+        
+        
+        </apex:pageBlock>
+     
+    
+    
+    
+    
+    </apex:form>
+    
+    
+</apex:page>

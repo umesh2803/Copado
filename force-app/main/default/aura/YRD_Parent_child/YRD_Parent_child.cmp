@@ -1,0 +1,39 @@
+<aura:component controller="YRD_AURA">
+    <aura:attribute name="ClientList" type="List" />
+    <aura:attribute type="String" name="clientId"/>
+    <aura:attribute type="date" name="Fromdate" />
+    <aura:attribute type="date" name="Todate" />
+    <aura:attribute type="Boolean" name="showdata" default="false" />
+    <aura:handler name="init" Value="{!this}" Action="{!c.invoke}" />
+ <lightning:avatar fallbackIconName="standard:person_account" alternativeText="account" />
+    <lightning:layout multipleRows="true" class="slds-card">
+    	
+       
+        <lightning:layoutItem size="3" flexibility="auto" padding="around-small">
+            <lightning:combobox name="ClientDropDown" label="Active Client Policy" placeholder="Select Client" options="{!v.ClientList}" value="{!v.clientId}"/>
+            </lightning:layoutItem>
+             <lightning:layoutItem size="3" padding="around-small">
+             
+              <lightning:input type="date" name="FromDate" label="From Date" placeholder="From date" value="{!v.Fromdate}"/>
+              </lightning:layoutItem>
+        <lightning:layoutItem size="3" padding="around-small">
+              <lightning:input type="date" name="ToDate" label="To Date" placeholder="To date" value="{!v.Todate}"/>
+             
+             </lightning:layoutItem>
+       
+        <lightning:layoutItem size="3" padding="around-small" >
+            <div class="slds-p-top_large">
+            <lightning:button label="Show" variant="brand" onclick="{!c.showpolicy}"  />
+            <lightning:button label="Render" onclick="{!c.resetFilters}"  />
+            </div>
+             </lightning:layoutItem>
+           
+      
+            <div class="slds-card__footer"><div class="box">YRD@salesforce</div></div>
+    </lightning:layout>
+  <aura:if isTrue="{!v.showdata}">
+   
+    <c:YRD_Parent_child_child clientId="{!v.clientId}" Fromdate="{!v.Fromdate}" Todate="{!v.Todate}" aura:id="InsID" />
+     
+    </aura:if>
+</aura:component>

@@ -1,0 +1,12 @@
+<apex:page controller="JSON_EXAMPLE_1" >
+    integer---{!integervalue};<br/>
+    decimal---{!decimalvalue};<br/>
+    account---{!accountvalue};<br/>
+    student---{!studentvalue};<br/>
+    integervaluepretty----{!integervaluepretty};<br/>
+    decimalvaluepretty----{!decimalvaluepretty};<br/>
+    accountvaluepretty----{!accountvaluepretty};<br/>
+    studentvaluepretty----{!studentvaluepretty};<br/>
+    withoutsuppressnulls---{!studentvaluewithoutsuppressnulls};<br/>
+    withsuppress----{!studentvaluenullwithsuppressnulls};
+</apex:page>

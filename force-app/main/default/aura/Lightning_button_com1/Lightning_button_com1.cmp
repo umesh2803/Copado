@@ -1,0 +1,10 @@
+<aura:component >
+    <lightning:button label="OK" />
+    <lightning:button label="base" variant="base" />
+    <lightning:button label="neutral" variant="neutral" title="it is neutral" />
+    <lightning:button label="brand" variant="brand" name="ok" />
+    <lightning:button label="destructive" variant="destructive" iconName="standard:account" />
+    <lightning:button label="inverse" variant="inverse" />
+    <lightning:button label="success" variant="success" iconName="utility:down" iconPosition="right" />
+    
+</aura:component>

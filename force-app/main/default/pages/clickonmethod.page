@@ -1,0 +1,17 @@
+<apex:page >
+   
+        
+        <script>
+       function show()
+       { alert('this is script');}
+            
+        </script>
+     <apex:form >
+         <apex:inputText id="name" onchange="show()"/>
+
+        </apex:form>  
+    
+    
+    
+  
+        </apex:page>

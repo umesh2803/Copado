@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:attribute name="Enter_Number_1" type="integer" />
+    <aura:attribute name="Result" type="integer" />
+    <aura:attribute name="Enter_Number_2" type="integer" />
+    
+   
+    <aura:handler name="init" value="{!this}" action="{!c.show}" />
+    
+    <div>
+        Enter Number 1  :{!v.Enter_Number_1} <br/>
+        
+        Enter Number 2  :{!v.Enter_Number_2} <br/>
+       
+       
+        Final Result  :{!v.Result} 
+        
+    
+    
+    </div>
+    
+	
+</aura:component>

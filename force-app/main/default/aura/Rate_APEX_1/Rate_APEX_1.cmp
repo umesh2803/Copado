@@ -1,0 +1,16 @@
+<aura:component controller="Rate_APEX_1" >
+    <!--<aura:attribute name="Interest" type="integer" default="100" />-->
+    
+    <div class="hulk">
+    <lightning:input label="Amount" Aura:id="amount" />
+    <lightning:input label="Rate" Aura:id="Rate" />
+    <lightning:input label="Year" Aura:id="Year" />
+    <lightning:input label="Interest" Aura:id="Interest" />
+        <br/>
+        {!v.Interest}
+        <br/>
+        <lightning:button label="Submit" onclick="{!c.showme}" />    
+    </div>
+    
+    
+</aura:component>
